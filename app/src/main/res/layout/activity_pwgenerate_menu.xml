@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/PWGenerate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PWGenerateMenu">
+
+    <ImageButton
+        android:id="@+id/closeGenerateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="339dp"
+        android:layout_marginBottom="13dp"
+        android:contentDescription="閉じるボタンです"
+        app:layout_constraintBottom_toTopOf="@+id/arrayListScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_dialog" />
+
+    <ScrollView
+        android:id="@+id/arrayListScrollView"
+        android:layout_width="347dp"
+        android:layout_height="375dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/closeGenerateButton">
+
+        <TextView
+            android:id="@+id/arrayListText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_style"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/nextPWButton"
+        android:layout_width="120dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="16dp"
+        android:text="生成"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/charLengthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="19dp"
+        android:text="文字数　　　　："
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arrayListScrollView" />
+
+    <TextView
+        android:id="@+id/lowerCaseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="英語(小文字)     ："
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/numberBooleanText"
+        app:layout_constraintTop_toBottomOf="@+id/upperCaseText" />
+
+    <TextView
+        android:id="@+id/numberBooleanText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="数字　　　  　  ："
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/symbolBooleanText"
+        app:layout_constraintTop_toBottomOf="@+id/lowerCaseText" />
+
+    <TextView
+        android:id="@+id/upperCaseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="英語(大文字)     ："
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/lowerCaseText"
+        app:layout_constraintTop_toBottomOf="@+id/charLengthText" />
+
+    <TextView
+        android:id="@+id/symbolBooleanText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="記号　　　　　："
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberBooleanText" />
+
+    <TextView
+        android:id="@+id/getCharLengthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toEndOf="@+id/charLengthText"
+        app:layout_constraintTop_toBottomOf="@+id/arrayListScrollView" />
+
+    <TextView
+        android:id="@+id/getBooleanUpperCaseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/getBooleanLowerCaseText"
+        app:layout_constraintTop_toBottomOf="@+id/getCharLengthText" />
+
+    <TextView
+        android:id="@+id/getBooleanLowerCaseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/getBooleanNumberText"
+        app:layout_constraintTop_toBottomOf="@+id/getBooleanUpperCaseText" />
+
+    <TextView
+        android:id="@+id/getBooleanNumberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/getBooleanSymbolText"
+        app:layout_constraintTop_toBottomOf="@+id/getBooleanLowerCaseText" />
+
+    <TextView
+        android:id="@+id/getBooleanSymbolText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toEndOf="@+id/symbolBooleanText"
+        app:layout_constraintTop_toBottomOf="@+id/getBooleanNumberText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

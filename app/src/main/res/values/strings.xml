@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FlexiblePassWordGenerator</string>
+    <string name="selectEditText_number">1~20の数字を入力してください</string>
+    <string name="text_view">Hello World</string>
+    <string name="dialog_title">Sample</string>
+    <string name="dialog_message">ダイアログのサンプルです</string>
+    <string name="dialog_button_ok">OK</string>
+    <string name="dialog_button_cancel">Cancel</string>
+    <string name="dialog_button_neutral">Neutral</string>
+    <string name="button">ダイアログを表示</string>
+</resources>
